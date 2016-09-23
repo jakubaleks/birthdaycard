@@ -21,7 +21,7 @@
   <title>Happy Birthday</title>
   <script>
     function gotopage(input){
-      window.location.href = "https://duckduckgo.com/?q= " + input + "&t=h_&ia=meanings"
+      window.location.href = "https://duckduckgo.com/?q= " + document.getElementsByName(Searchbox) + "&t=h_&ia=meanings"
     }
   </script>
 </head>
@@ -30,10 +30,9 @@
   <p>Friend or Family Member</p>
   <img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200" alt="picture">
   
-  <form action="demo_form.asp" method="get">
-  Query: <input type="text" name="q"> <br>
-  <button type="submit" value="Submit" onclick="gotopage(q);" > Search </button>
-  </form>
+<input name="Searchbox" type="text" />
+<input name="SearchButton" onclick="execute(document.getElementsByName(Searchbox))" type="button" value="Execute" />
+
     
     
     
